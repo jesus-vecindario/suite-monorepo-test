@@ -1,0 +1,27 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-header-modules {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	> .title {
+		@extend .color-secondary-700t;
+	}
+	> .subtitle {
+		@extend .color-secondary-500t;
+	}
+}
+.container-step-modules {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+	row-gap: 40px;
+	margin-top: 36px;
+	margin-bottom: 40px;
+	width: 417px;
+}
+.button-next {
+	width: 100%;
+}

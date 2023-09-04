@@ -1,0 +1,54 @@
+@import '../../../application/theme/colors.scss';
+
+.container-alert-plan {
+	@extend .bg-warning;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	padding: 9px 43px;
+	width: 100vw;
+	height: 50px;
+	bottom: 0px;
+	left: 0;
+	animation: container-alert-plan 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+	> .description {
+		display: flex;
+		align-items: center;
+		column-gap: 26px;
+		padding-left: 109px;
+		> .icon {
+			@extend .color-primary;
+		}
+	}
+
+	> .action-button {
+		@extend .color-white;
+		height: 32px;
+		width: 150px;
+		padding: 0;
+		font-size: 10px;
+		margin-right: 60px;
+	}
+}
+
+@-webkit-keyframes container-alert-plan {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes container-alert-plan {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

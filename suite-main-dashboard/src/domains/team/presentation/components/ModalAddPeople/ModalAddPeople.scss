@@ -1,0 +1,16 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-add-people {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	> .title-add {
+		font-weight: 700;
+		font-size: 20px !important;
+		line-height: 24px;
+	}
+	> .description-add {
+		@extend .color-secondary-700t;
+		margin-bottom: 12px;
+	}
+}

@@ -1,0 +1,35 @@
+@import '../../../../../../shared/application/theme/colors.scss';
+
+.wapper-module {
+	display: flex;
+	column-gap: 16px;
+	align-items: center;
+	width: 100%;
+
+	> .container-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #ececec;
+		border-radius: 8px;
+		min-width: 56px;
+		height: 52px;
+
+		> .icon {
+			@extend .color-primary;
+		}
+	}
+
+	> .container-body {
+		display: flex;
+		flex-direction: column;
+
+		> .title {
+			@extend .color-secondary;
+		}
+
+		> .description {
+			@extend .color-secondary-500t;
+		}
+	}
+}

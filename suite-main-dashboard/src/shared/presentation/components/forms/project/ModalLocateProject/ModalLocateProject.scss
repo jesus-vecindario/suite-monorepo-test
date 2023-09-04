@@ -1,0 +1,31 @@
+@import '../../../../../../shared/application/theme/colors.scss';
+
+.container-locate-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 22px;
+	width: 100%;
+
+	> .title {
+		@extend .color-secondary-700t;
+	}
+
+	> .container-map {
+		width: 100%;
+		height: 270px;
+	}
+
+	> .error-location {
+		@extend .color-error;
+		display: flex;
+		column-gap: 5px;
+	}
+
+	> .form-button {
+		> .spinner-locate {
+			border-color: $white;
+			border-left-color: $secondary;
+		}
+	}
+}

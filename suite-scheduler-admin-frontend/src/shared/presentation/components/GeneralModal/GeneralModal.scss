@@ -1,0 +1,17 @@
+@import '../../../application/theme/animations';
+@import '../../../application/theme/theme';
+
+.scheduler-general-modal-icon {
+	@extend .color-primary;
+	font-size: 2.3rem;
+	cursor: pointer;
+	position: relative;
+	align-self: flex-end;
+	margin-bottom: 15px;
+}
+
+.scheduler-general-modal {
+	max-height: 99vh;
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,76 @@
+@import '../../../../../../../shared/application/theme/colors';
+
+$base-color: #0f4ffa;
+
+$green: #9bddbf;
+$green-text: #03884b;
+
+$yellow: #ffc66f;
+$yellow-text: #996e2d;
+
+$pink: #ffa6f1;
+$pink-text: #8b037e;
+
+$red: #dd9b9b;
+$red-text: #880303;
+
+.type-status {
+	width: 126px;
+	box-shadow: 0px 4px 13px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 1rem;
+
+	> .option {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+		border-radius: 4px;
+		cursor: pointer;
+		text-transform: capitalize;
+		width: 100px;
+		height: 32px;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 11px;
+		letter-spacing: 0.66px;
+	}
+
+	> .option:last-child {
+		margin-bottom: 10px;
+	}
+
+	> .option:hover {
+		width: 9.5rem;
+	}
+
+	> .green {
+		color: $green-text;
+		background: linear-gradient(0deg, $green, $green), $base-color;
+	}
+
+	> .yellow {
+		color: $yellow-text;
+		background: linear-gradient(0deg, $yellow, $yellow), $base-color;
+	}
+
+	> .pink {
+		color: $pink-text;
+		background: linear-gradient(0deg, $pink, $pink), $base-color;
+	}
+
+	> .red {
+		color: $red-text;
+		background: linear-gradient(0deg, $red, $red), $base-color;
+	}
+
+	> .gray {
+		@extend .color-secondary-600t;
+		background: linear-gradient(0deg, $grayNotAttended, $grayNotAttended), $base-color;
+	}
+}

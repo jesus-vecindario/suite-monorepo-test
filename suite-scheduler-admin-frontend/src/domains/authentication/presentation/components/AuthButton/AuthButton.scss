@@ -1,0 +1,61 @@
+@import '../../../../../shared/application/theme/colors';
+
+.button-shadow {
+	display: flex;
+	justify-content: center;
+	margin: 3rem 0;
+	align-items: center;
+
+	> .content-button {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 90%;
+		@extend .bg-white;
+
+		img {
+			max-width: 31px;
+			height: auto;
+		}
+	}
+
+	&.-button-sync-profile {
+		border-radius: 8px;
+		box-shadow: none;
+		font-size: 1.2rem;
+		margin-top: 4.2rem;
+		color: red;
+
+		> .content-button {
+			@extend .color-secondary;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 22px;
+			justify-content: center;
+
+			img {
+				margin-right: 1.7rem;
+			}
+		}
+	}
+	&.-button-sync-profile-small {
+		width: 195px;
+	}
+}
+
+.sync-btn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	@extend .color-secondary;
+	font-size: 13px;
+
+	> .logo {
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
+	}
+}

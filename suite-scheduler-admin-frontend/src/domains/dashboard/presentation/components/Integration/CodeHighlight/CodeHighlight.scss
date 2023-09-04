@@ -1,0 +1,41 @@
+@import '../../../../../../shared/application/theme/colors';
+
+.code-highlight-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 60px;
+
+	> .icon-container {
+		padding: 8px 16px;
+		display: flex;
+		align-items: center;
+		font-size: 13px;
+		> .icon {
+			@extend .color-secondary-900t;
+			margin-right: 12px;
+			font-size: 20px;
+		}
+	}
+
+	> .code-container {
+		width: 100%;
+		text-align: left;
+		white-space: pre-line;
+		flex: 1;
+		span {
+			word-break: break-all;
+		}
+		> .language-html {
+			padding: 3rem;
+			border-radius: 8px;
+			font-size: 1.4rem;
+			.hljs-tag {
+				.hljs-attr {
+					color: #f92672;
+				}
+			}
+		}
+	}
+}

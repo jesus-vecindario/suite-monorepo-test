@@ -1,0 +1,27 @@
+.tracking-page-layout {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	row-gap: 28px;
+}
+
+.tracking-page {
+	@extend .tracking-page-layout;
+
+	> .form {
+		@extend .tracking-page-layout;
+		transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+		overflow: hidden;
+		max-height: 0;
+
+		> .submit {
+			align-self: end;
+		}
+
+		&.active {
+			max-height: 10000px;
+			transition: max-height 2s ease-in-out;
+		}
+	}
+}

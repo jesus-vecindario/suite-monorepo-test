@@ -1,0 +1,54 @@
+@import '../../../../../../shared/application/theme/colors';
+@import '../../../../../../shared/application/theme/mixins';
+
+.card-header {
+	font-size: 1.2rem;
+
+	> th {
+		text-align: start;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: bolder;
+		@extend .color-secondary-800t;
+
+		@include x-x-large-view {
+			font-size: width-ratio(11px);
+		}
+	}
+
+	&.team-th th {
+		padding-bottom: 20px;
+	}
+
+	> .col-hour {
+		width: 160px;
+	}
+
+	> .col-name {
+		min-width: 160px;
+		max-width: 180px;
+	}
+
+	> .col-phone {
+		min-width: 160px;
+		max-width: 180px;
+	}
+
+	> .col-type {
+		min-width: 100px;
+		max-width: 120px;
+	}
+
+	> .col-status {
+		min-width: 120px;
+		max-width: 150px;
+	}
+
+	> .col-project {
+		width: 200px;
+	}
+
+	> .col-link {
+		width: 28px;
+	}
+}

@@ -1,0 +1,42 @@
+@import '../../../../../../shared/application/theme/colors';
+
+.day-detail {
+	height: 32px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	@extend .border-secondary-500t;
+	border-radius: 4px;
+	padding: 0 8px;
+
+	> .hour {
+		font-size: 1.3rem;
+		margin-right: 36px;
+		@extend .color-secondary-700t;
+	}
+
+	> .icon {
+		font-size: 12px;
+		@extend .color-secondary-700t;
+	}
+
+	&.rest-day {
+		@extend .bg-neutral-300t;
+	}
+}
+
+.error {
+	@extend .border-error;
+
+	> .hour {
+		@extend .color-error;
+	}
+
+	> .icon {
+		@extend .color-error;
+	}
+}

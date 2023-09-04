@@ -1,0 +1,97 @@
+@import 'src/shared/application/theme/colors';
+
+.board-container {
+	width: 100%;
+	height: 718px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+	overflow-y: hidden;
+
+	> .board-wrapper {
+		width: 100%;
+		height: 100%;
+		max-width: 1100px;
+		display: grid;
+		grid-template-columns: [left-side] 3fr [right-side] auto [end];
+		gap: 40px;
+
+		> .left-side {
+			grid-column-start: left-side;
+			grid-column-end: right-side;
+			width: 100%;
+			height: 100%;
+
+			display: grid;
+			grid-template-rows: [first-content] 1fr [second-content] 2fr [end];
+			gap: 36px;
+
+			> .pending-actions {
+				height: 242px;
+				grid-row-start: first-content;
+				grid-row-end: second-content;
+			}
+
+			> .suite-modules-info {
+				height: 398px;
+				grid-row-start: second-content;
+				grid-row-end: end;
+
+				display: grid;
+				grid-template-columns: [inventory] 1fr [business] 1fr [end];
+				gap: 36px;
+
+				> .inventory-card {
+					grid-column-start: inventory;
+					grid-column-end: business;
+				}
+
+				> .business-card {
+					grid-column-start: business;
+					grid-column-end: end;
+				}
+			}
+
+			&.checklist-completed {
+				grid-template-columns: 1fr;
+
+				> .modules-info {
+					display: grid;
+					grid-template-rows: [inventory] 1fr [business] 3fr [suite-end];
+					gap: 36px;
+
+					> .inventory-card {
+						grid-row-start: inventory;
+						grid-row-end: business;
+					}
+
+					> .business-card {
+						grid-row-start: business;
+						grid-row-end: suite-end;
+					}
+				}
+			}
+		}
+
+		> .right-side {
+			width: 340px;
+			height: 674px;
+			grid-column-start: right-side;
+			grid-column-end: end;
+
+			display: grid;
+			grid-template-rows: [project-card] 2fr [team-card] 5fr [end];
+			gap: 28px;
+
+			> .project-card {
+				grid-row-start: project-card;
+				grid-row-end: team-card;
+			}
+
+			> .team-card {
+				grid-row-start: team-card;
+				grid-row-end: end;
+			}
+		}
+	}
+}

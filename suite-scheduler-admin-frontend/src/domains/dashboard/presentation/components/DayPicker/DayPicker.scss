@@ -1,0 +1,41 @@
+@import '../../../../../shared/application/theme/colors';
+@import '../../../../../shared/application/theme/mixins';
+
+.day-picker-container {
+	border-width: 1px;
+	border-style: solid;
+	border-color: $gray-background;
+	border-radius: 8px;
+	padding-left: 26px;
+}
+
+.DayPicker {
+	border-radius: 8px;
+	background-color: white;
+	.DayPicker-wrapper {
+		padding: 3.2rem;
+		font-size: 1.5rem;
+	}
+	.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+		background-color: $secondary;
+		color: white;
+		&:hover {
+			background-color: $secondary;
+			color: white;
+		}
+	}
+	&:not(.DayPicker--interactionDisabled) {
+		.DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside) {
+			&:hover {
+				background-color: tint($secondary, 20%);
+				color: white;
+			}
+		}
+	}
+	.DayPicker-Caption {
+		text-transform: capitalize;
+	}
+	.DayPicker-Weekday {
+		text-transform: capitalize;
+	}
+}

@@ -1,0 +1,37 @@
+@import './mixins.scss';
+
+$primary: #244ef1;
+$secondary: #0b1d2e;
+$success: #04aa5e;
+$warning: #ffb84b;
+$info: #d3dcfc;
+$error: #e30042;
+$black: #1f1f1f;
+$white: #ffffff;
+$neutral: #bfbfbf;
+
+$gray: #717171;
+$gray-secondary: #979797;
+$gray-tertiary: #ccc;
+$gray-divider: #c8c8c8;
+$gray-quaternary: #6d7782;
+$gray-subtitle: #666666;
+$gray-subtitle-secondary: #9da5ab;
+$fontColor: $secondary;
+$bgBody: $white;
+
+$blackPrimary: #091725;
+
+$progressBarBackground: #dcdcdc;
+$colorLines: #dcdcdc;
+
+// keep in mind this color is in the design as secondary/100t
+.bg-secondary-96t {
+	background-color: tint($secondary, 96);
+}
+.color-secondary-96t {
+	color: tint($secondary, 96);
+}
+@include key-value-color('color', 'color');
+@include key-value-color('bg', 'background-color');
+@include key-value-color('border', 'border-color');

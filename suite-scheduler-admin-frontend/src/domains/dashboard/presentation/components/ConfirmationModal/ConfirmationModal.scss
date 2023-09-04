@@ -1,0 +1,20 @@
+@import 'src/shared/application/theme/colors';
+
+.confirm-modal-container {
+	> .title {
+		margin-bottom: 16px;
+		@extend .color-secondary-900t;
+	}
+
+	> .description {
+		@extend .color-secondary-700t;
+		margin-bottom: 16px;
+	}
+
+	> .team-delete-actions {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 25px;
+		margin-top: 16px;
+	}
+}

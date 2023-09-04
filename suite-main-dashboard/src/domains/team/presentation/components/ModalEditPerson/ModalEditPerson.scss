@@ -1,0 +1,68 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-edit-person {
+	> .title-edit {
+		margin-bottom: 6px;
+		> .name {
+			@extend .color-primary;
+		}
+	}
+	> .description-edit {
+		@extend .color-secondary-700t;
+		margin-bottom: 22px;
+	}
+	> .form-edit-person {
+		display: flex;
+		flex-direction: column;
+		> .person-rol {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 22px;
+			.suite-radio-label {
+				@extend .color-secondary-600t;
+			}
+		}
+		> .container-modules {
+			> .select-all {
+				display: flex;
+				align-items: center;
+				column-gap: 9px;
+				margin: 20px 0;
+			}
+			> .select-modules {
+				margin-bottom: 26px;
+			}
+		}
+
+		> .appointment-types {
+			margin-top: 16px;
+
+			> .options {
+				margin-top: 24px;
+			}
+		}
+		.separator {
+			@extend .bg-secondary-400t;
+			margin: 26px 0 23px 0;
+			width: 100%;
+			height: 1px;
+		}
+		> .container-buttons {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 14px;
+
+			> .form-button {
+				> .icon-add {
+					margin-left: 8px;
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		.error-message {
+			padding-top: 10px;
+		}
+	}
+}

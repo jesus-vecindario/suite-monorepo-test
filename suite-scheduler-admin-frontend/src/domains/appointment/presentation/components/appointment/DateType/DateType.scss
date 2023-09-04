@@ -1,0 +1,85 @@
+@import '../../../../../../shared/application/theme/colors';
+@import '../../../../../../shared/application/theme/mixins';
+
+.date-type-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	* {
+		font-family: 'DM Sans';
+	}
+
+	> .label {
+		@extend .color-black;
+		font-size: 16px;
+		font-weight: 500;
+		margin-right: 2rem;
+	}
+
+	> .type {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 6.4rem;
+		padding: 0.8rem;
+		border-width: 1px;
+		border-style: solid;
+		@extend .border-secondary-700t;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease-out;
+		@extend .bg-neutral-100t;
+		@extend .color-secondary-700t;
+		margin-left: 20px;
+
+		&:hover,
+		&.-active {
+			border: none;
+			@extend .bg-secondary;
+			@extend .color-white;
+		}
+
+		&.hide {
+			display: none;
+		}
+	}
+}
+
+.date-type-error {
+	margin-top: -12px;
+
+	> .error {
+		font-size: 13px;
+		@extend .color-error;
+	}
+}
+
+.date-type-warning {
+	@extend .bg-warning-100t;
+	padding: 14px 24px;
+	display: flex;
+	align-items: center;
+	border-radius: 11px;
+	font-size: 1.28rem;
+	line-height: 20px;
+
+	> i {
+		margin-right: 23px;
+		font-size: 2.3rem;
+		@extend .color-secondary-700t;
+	}
+
+	> .text-warning {
+		@extend .color-secondary-700t;
+
+		> .link-sync {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-row-person {
+	border-radius: 4px;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 25px;
+
+	> .avatar {
+		@extend .bg-secondary;
+		@extend .color-white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		min-width: 40px;
+		height: 40px;
+	}
+
+	> .info-person {
+		display: flex;
+		flex-direction: column;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 20px;
+		width: 100%;
+
+		> .name-and-edit {
+			display: flex;
+			column-gap: 12px;
+			> .name-person {
+				overflow-x: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				cursor: pointer;
+			}
+			> .container-icon-confg {
+				@extend .color-primary;
+				column-gap: 4px;
+				align-items: center;
+				cursor: pointer;
+				display: none;
+				> .icon-person {
+					font-size: 14px;
+				}
+			}
+			&:hover > .container-icon-confg {
+				display: flex;
+			}
+		}
+
+		> .email-person {
+			@extend .color-secondary-500t;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 241px;
+		}
+
+		> .container-active-modules {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			min-width: 96px;
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	> .icon-person:last-of-type {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,26 @@
+@import '../../../application/theme/colors';
+
+.container-spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@keyframes loading-spinner {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	.loading-spinner {
+		color: $primary;
+		font-size: 4rem;
+		display: inline-block;
+		-webkit-animation: loading-spinner 2s infinite linear;
+		animation: loading-spinner 2s infinite linear;
+	}
+}

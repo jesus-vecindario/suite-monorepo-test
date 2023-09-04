@@ -1,0 +1,46 @@
+@import 'src/shared/application/theme/colors';
+
+.project-card-container {
+	padding: 24px;
+	background: linear-gradient(119.41deg, #1d3ec1 -43.26%, #0e1f60 49.07%);
+	border-radius: 16px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	> .header {
+		> .title {
+			@extend .color-primary-100t;
+		}
+
+		> .project-title {
+			@extend .color-white;
+		}
+	}
+
+	> .footer {
+		display: flex;
+		justify-content: space-between;
+
+		> .director-info {
+			align-self: flex-end;
+
+			> .rol-title {
+				@extend .color-primary-100t;
+			}
+
+			> .director-name {
+				@extend .color-white;
+			}
+		}
+
+		> .project-logo {
+			width: 70px;
+			height: 50px;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 4px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-people-team {
+	> .title {
+		margin-bottom: 8px;
+	}
+	> .description {
+		@extend .color-secondary-700t;
+		margin-bottom: 28px;
+		line-height: 22px !important;
+		font-size: 13px;
+	}
+	> .contianer-rows {
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		padding: 10px 16px;
+		background-color: transparent;
+		transition: background-color 1s ease-in-out;
+
+		&:hover {
+			@extend .bg-neutral-200t;
+		}
+
+		> .empty-row {
+			@extend .bg-secondary-100t;
+			@extend .color-secondary-800t;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 20px 16px;
+		}
+	}
+}

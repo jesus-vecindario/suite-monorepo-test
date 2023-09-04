@@ -1,0 +1,53 @@
+@import 'src/shared/application/theme/colors';
+
+.inventory-cards-container {
+	height: 100%;
+	display: grid;
+
+	&.row {
+		grid-template-rows: 1fr 1fr;
+	}
+
+	&.col {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	gap: 20px;
+
+	> .card-container {
+		padding: 24px 32px;
+		@extend .bg-white;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		text-decoration: none;
+		> .wrapper-icon {
+			width: 44px;
+			height: 44px;
+			border-radius: 8px;
+			@extend .bg-primary-100t;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 20px;
+
+			> .icon {
+				font-size: 24px;
+				@extend .color-primary-400t;
+				font-weight: 500;
+			}
+		}
+
+		> .card-info {
+			> .title {
+				@extend .color-secondary-300t;
+			}
+
+			> .value {
+				@extend .color-secondary-700t;
+			}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+{
+  "name": "suite-scheduler-admin-frontend",
+  "version": "1.1.4",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^2.6.0",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@vecindario/suite-dashboard-layout-lib": "^1.0.8",
+    "@vecindario/suite-library": "^1.1.1",
+    "@vecindario/vecindario-suite-components": "^2.1.5",
+    "bx-stable-infinite-scroll": "^1.1.2",
+    "history": "^4.10.1",
+    "modern-normalize": "^1.1.0",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-accessible-accordion": "^4.0.0",
+    "react-autosuggest": "^10.0.2",
+    "react-cropper": "^2.1.8",
+    "react-day-picker": "^7.4.10",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.9.0",
+    "react-modal": "^3.14.3",
+    "react-phone-input-2": "^2.14.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.0",
+    "react-tiny-popover": "^6.0.5",
+    "react-tooltip": "^4.2.21",
+    "react-transition-group": "^4.4.2",
+    "redux": "^4.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
+    "remixicon": "^2.5.0",
+    "sass": "^1.49.9",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint:github-action": "eslint src/",
+    "test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
+    "coverage": "yarn test --coverage --watchAll=false --passWithNoTests"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/reportWebVitals.js",
+      "!src/index.js",
+      "!src/loader.js"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  }
+}

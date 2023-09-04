@@ -1,0 +1,85 @@
+@import '../../../../../../../shared/application/theme/colors';
+
+$base-color: #0f4ffa;
+
+$green: #9bddbf;
+$green-text: #03884b;
+
+$yellow: #ffc66f;
+$yellow-text: #996e2d;
+
+$pink: #ffa6f1;
+$pink-text: #8b037e;
+
+$red: #dd9b9b;
+$red-text: #880303;
+
+.container-selected-status {
+	display: flex;
+	align-items: center;
+	> .selected-status {
+		cursor: pointer;
+		font-size: 1.2rem;
+		padding: 7px 9px 8px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 32px;
+		font-size: 13px;
+		text-transform: capitalize;
+		border-radius: 4px;
+
+		> .icon {
+			color: $gray-quaternary;
+			cursor: pointer;
+			font-weight: bold;
+			margin-left: 11px;
+		}
+	}
+
+	> .green {
+		color: $green-text;
+		background: linear-gradient(0deg, $green, $green), $base-color;
+
+		> .icon {
+			color: $green-text;
+		}
+	}
+
+	> .yellow {
+		color: $yellow-text;
+		background: linear-gradient(0deg, $yellow, $yellow), $base-color;
+
+		> .icon {
+			color: $yellow-text;
+		}
+	}
+
+	> .pink {
+		color: $pink-text;
+		background: linear-gradient(0deg, $pink, $pink), $base-color;
+
+		> .icon {
+			color: $yellow-text;
+		}
+	}
+
+	> .red {
+		margin-left: 0;
+		color: $red-text;
+		background: linear-gradient(0deg, $red, $red), $base-color;
+
+		> .icon {
+			color: $yellow-text;
+		}
+	}
+
+	> .gray {
+		@extend .color-secondary-600t;
+		background: linear-gradient(0deg, $grayNotAttended, $grayNotAttended), $base-color;
+
+		> .icon {
+			@extend .color-secondary-600t;
+		}
+	}
+}

@@ -1,0 +1,138 @@
+@import '../../../../../../shared/application/theme/colors';
+
+$bg-color: #f5f7f8;
+$br-radius: 4px;
+
+.day-option-row {
+	@extend .bg-neutral-200t;
+	height: 56px;
+	border-radius: 5px;
+
+	> .empty-row {
+		@extend .bg-white;
+		> .radius {
+			width: 100%;
+			height: 56px;
+			@extend .bg-neutral-200t;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+	}
+
+	> .name-row {
+		> .wrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			> .icon {
+				width: 24px;
+				height: 24px;
+			}
+
+			> .name {
+				@extend .color-secondary-800t;
+				font-weight: 700;
+				font-size: 18px;
+				margin-left: 16px;
+			}
+		}
+	}
+
+	> .start-date {
+		position: relative;
+		> .wrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			> .separator {
+				@extend .color-secondary-600t;
+				font-size: 13px;
+				margin-right: 24px;
+			}
+		}
+
+		> .alert-rest-day {
+			@extend .bg-warning-100t;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			column-gap: 16px;
+			border-radius: 4px;
+			padding: 11.33px 10px;
+			height: 36px;
+			width: 226px;
+			position: absolute;
+			bottom: -30px;
+
+			> .icon {
+				@extend .color-warning-700s;
+			}
+
+			> .description {
+				@extend .color-secondary-700t;
+			}
+		}
+
+		&:hover {
+			> .alert-rest-day {
+				display: flex;
+			}
+		}
+	}
+
+	> .end-date {
+		> .wrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			> .separator {
+				@extend .color-secondary-600t;
+				font-size: 13px;
+				margin-right: 24px;
+			}
+		}
+	}
+
+	> .toggle-row {
+		@extend .bg-white;
+		> .day-active-section {
+			@extend .bg-neutral-200t;
+			width: 100%;
+			height: 56px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+
+			> .text {
+				margin-left: 15px;
+				@extend .color-primary;
+				font-size: 13px;
+
+				&.rest-day {
+					@extend .color-secondary-600t;
+				}
+			}
+		}
+	}
+
+	&.rest-day {
+		@extend .bg-neutral-500t;
+
+		> .empty-row {
+			> .radius {
+				@extend .bg-neutral-500t;
+			}
+		}
+
+		> .toggle-row {
+			> .day-active-section {
+				@extend .bg-neutral-500t;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - 'hotfix/**'
+      - 'hotfix-**'
+  pull_request:
+    branches:
+      - develop
+      - master
+      - 'hotfix/**'
+      - 'hotfix-**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+        CI: false
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: yarn install
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Install Eslint
+        run: yarn global add eslint
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
+      - name: Run tests
+        run: yarn run test -- --coverage --no-watch --watch=false --watchAll=false --no-watchman --detectOpenHandles --forceExit --passWithNoTests
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}

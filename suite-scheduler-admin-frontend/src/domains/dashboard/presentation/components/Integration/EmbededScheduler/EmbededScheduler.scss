@@ -1,0 +1,18 @@
+@import 'src/shared/application/theme/colors';
+
+.embeded-scheduler-integration {
+	> .title {
+		@extend .color-black;
+		letter-spacing: -1px;
+		margin-bottom: 2.9rem;
+	}
+	> .description {
+		@extend .color-secondary-700t;
+		margin-top: 2.9rem;
+		margin-bottom: 2.9rem;
+	}
+
+	> .code-wrapper {
+		margin-bottom: 120px;
+	}
+}

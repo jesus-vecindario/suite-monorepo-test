@@ -1,0 +1,12 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.active-module {
+	@extend .color-primary;
+	@extend .bg-primary-100t;
+	padding: 4px 6px;
+	height: 28px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

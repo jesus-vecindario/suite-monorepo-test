@@ -1,0 +1,42 @@
+@import 'src/shared/application/theme/colors';
+
+.row-default-styles {
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.day-scheduler-header-container {
+	padding: 12px;
+	height: 56px;
+
+	> .empty-row {
+		width: 120px;
+		> .radius {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	> .day-row {
+		@extend .color-secondary-800t;
+		@extend .row-default-styles;
+		font-size: 18px;
+	}
+
+	> .start-row {
+		@extend .color-secondary-600t;
+		@extend .row-default-styles;
+	}
+
+	> .end-row {
+		@extend .color-secondary-600t;
+		@extend .row-default-styles;
+	}
+
+	> .toggle-row {
+		@extend .color-secondary-500t;
+		@extend .row-default-styles;
+	}
+}

@@ -1,0 +1,25 @@
+@import 'src/shared/application/theme/colors';
+
+.module-toast-container {
+	@extend .bg-primary-100t;
+	width: 200px;
+	height: 44px;
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@extend .color-secondary;
+	font-size: 16px;
+
+	> .icon {
+		font-size: 22px;
+		@extend .color-black;
+		margin-right: 9px;
+	}
+
+	> .module-name {
+		@extend .color-primary;
+		font-size: 16px;
+		margin-left: 5px;
+	}
+}

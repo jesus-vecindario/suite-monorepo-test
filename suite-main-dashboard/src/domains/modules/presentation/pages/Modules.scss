@@ -1,0 +1,32 @@
+@import '../../../../shared/application/theme/colors.scss';
+
+.container-option-modules {
+	> .section-header {
+		margin: 30px 0 55px 0;
+		> .title {
+			@extend .color-secondary;
+			font-size: 20px;
+			line-height: 28px;
+			letter-spacing: -0.5px;
+			margin-bottom: 6px;
+		}
+		> .description {
+			@extend .color-secondary-700t;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	> .section-body {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px 18px;
+	}
+}
+
+@include x-x-large-view {
+	.container-option-modules {
+		> .section-body {
+			gap: 26px 30px;
+		}
+	}
+}

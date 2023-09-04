@@ -1,0 +1,13 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-option-edit {
+	> .section-body {
+		@extend .bg-white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 22px;
+		border-radius: 8px;
+		padding: 36px;
+	}
+}

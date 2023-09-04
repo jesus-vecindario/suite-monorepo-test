@@ -1,0 +1,54 @@
+@import '../../../../../shared/application/theme/colors';
+
+.toggle {
+	$dimension: 16px;
+	$gap: 8px;
+	&__container {
+		cursor: pointer;
+		position: relative;
+		width: 45px;
+		min-width: 40px;
+		height: $dimension + $gap;
+		@extend .bg-secondary-100t;
+		border-radius: 25px;
+		transition: 0.3s background-color 0.05s;
+
+		&:hover {
+			background-color: mix(white, $secondary, 40);
+		}
+
+		&.-active {
+			@extend .bg-primary-100t;
+
+			&:hover {
+				background-color: mix(white, $primary, 40);
+			}
+		}
+	}
+
+	&__circle {
+		position: absolute;
+		@extend .bg-primary;
+		border-radius: 50%;
+		width: $dimension;
+		height: $dimension;
+		text-align: center;
+		line-height: $dimension;
+		font-weight: bolder;
+		font-size: 0.9rem;
+		top: 50%;
+		left: $gap/2;
+		transform: translate(0, -50%);
+		transition: #{left 0.35s ease-in-out, 0.3s background-color 0.05s};
+
+		&--active {
+			left: calc(100% - #{$dimension + $gap/2});
+			transform: translate(0, -50%);
+		}
+
+		&--inactive {
+			@extend .bg-secondary-300t;
+			transform: translate(0, -50%);
+		}
+	}
+}

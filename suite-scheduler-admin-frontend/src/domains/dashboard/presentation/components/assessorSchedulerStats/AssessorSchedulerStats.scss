@@ -1,0 +1,29 @@
+@import 'src/shared/application/theme/colors';
+
+.scheduler-stats-container {
+	width: 350px;
+
+	.title {
+		@extend .color-black;
+		font-weight: 500;
+		font-size: 2.5rem;
+		line-height: 3.2rem;
+		letter-spacing: -1px;
+	}
+
+	> .total-schedules-container {
+		margin-top: 4.4rem;
+		> .amount {
+			@extend .color-secondary;
+			font-size: 4rem;
+			line-height: 5.6rem;
+		}
+
+		> .text-title {
+			@extend .color-secondary-600t;
+			font-size: 1.5rem;
+			line-height: 1.8rem;
+			font-weight: 500;
+		}
+	}
+}

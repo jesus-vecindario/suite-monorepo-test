@@ -1,0 +1,30 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces":[
+    "suite-main-dashboard",
+    "suite-scheduler-admin-frontend"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,md,ts,graphql,yml,yaml,json}": [
+      "npm run test:staged",
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css}": "prettier --write"
+  },
+  "devDependencies": {    
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

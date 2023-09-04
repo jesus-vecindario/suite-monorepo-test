@@ -1,0 +1,38 @@
+@import '../../../../../../../shared/application/theme/colors';
+
+.type-appointment {
+	width: 110px;
+	box-shadow: 0px 4px 13px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 1rem;
+
+	> .option {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@extend .bg-neutral-100t;
+		height: 3.2rem;
+		width: 7.7rem;
+		cursor: pointer;
+		border-radius: 4px;
+		border-width: 1px;
+		border-style: solid;
+		@extend .border-secondary-700t;
+		font-size: 13px;
+		@extend .color-secondary-700t;
+		margin-top: 8px;
+	}
+
+	> .option:last-child {
+		margin-bottom: 8px;
+	}
+
+	> .option:hover {
+		width: 7rem;
+	}
+}

@@ -1,0 +1,55 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-stepper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 156px;
+
+	> .step {
+		@extend .color-secondary-400t;
+		border: 2px solid tint($secondary, 60);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50px;
+		width: 32px;
+		height: 32px;
+		position: relative;
+		cursor: not-allowed;
+		&.-current {
+			border: 2px solid tint($primary, 0);
+			cursor: pointer;
+			> .text-step {
+				@extend .color-primary;
+			}
+		}
+		&.-success {
+			@extend .bg-primary;
+			border: 2px solid tint($primary, 0);
+			cursor: pointer;
+			> .text-step {
+				@extend .color-primary-100t;
+			}
+		}
+		&.-success::after {
+			content: '';
+			@extend .bg-primary;
+			position: absolute;
+			height: 2px;
+			left: 30px;
+			width: calc(156px / 3 - 22px);
+		}
+		&::after {
+			content: '';
+			@extend .bg-secondary-200t;
+			position: absolute;
+			height: 2px;
+			left: 30px;
+			width: calc(156px / 3 - 22px);
+		}
+		&:last-of-type::after {
+			width: 0px;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@import '../../../../../shared/application/theme/colors.scss';
+
+.container-module-card {
+	@extend .bg-white;
+	padding: 36px;
+	border-radius: 20px;
+	max-width: 339.33px;
+	width: 324px;
+	height: 309.05px;
+	display: flex;
+	flex-direction: column;
+
+	> .header-card {
+		> .container-icon {
+			@extend .bg-primary-100t;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 44px;
+			height: 44px;
+			> .icon-module {
+				@extend .color-primary;
+			}
+
+			a {
+				@extend .color-primary;
+				text-decoration: none;
+			}
+		}
+		> .title {
+			@extend .color-secondary;
+			margin: 27px 0 10px 0;
+			font-size: 1.3rem;
+			a {
+				color: inherit;
+			}
+		}
+	}
+
+	> .body-card {
+		> .description {
+			@extend .color-secondary-700t;
+			font-size: 1.2rem;
+			font-weight: normal;
+		}
+	}
+
+	> .footer-card {
+		margin-top: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		> .show-more {
+			@extend .color-primary;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}

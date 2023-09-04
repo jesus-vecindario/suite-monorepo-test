@@ -1,0 +1,83 @@
+@import './mixins.scss';
+
+$primary: #244ef1;
+$secondary: #0b1d2e;
+$success: #04aa5e;
+$warning: #ffb84b;
+$info: #d3dcfc;
+$error: #e30042;
+$black: #1f1f1f;
+$white: #ffffff;
+$neutral: #bfbfbf;
+
+$gray: #717171;
+$gray-secondary: #979797;
+$gray-tertiary: #ccc;
+$gray-divider: #c8c8c8;
+$gray-quaternary: #6d7782;
+$gray-subtitle: #666666;
+$gray-subtitle-secondary: #9da5ab;
+$fontColor: $secondary;
+$bgBody: $white;
+
+$light: #f4f9fd;
+$dark: #000;
+$dark-secondary: #323233;
+
+$gray-background: #e5e5e5;
+$purple-background: #4e4b78;
+
+$blue-secondary: #e2ecfb;
+
+$placeholderColor: $gray-secondary;
+$bgCard: #fffefe;
+
+$fontColor: $dark;
+$bgBody: $light;
+
+// DropDown Colors
+$dropBlue: #dde1fc;
+$dropTextBlue: #133db9;
+$dropGreen: #bfffd9;
+$dropTextGreen: #06ae2b;
+$dropYellow: #ffd25f;
+$dropTextYellow: #cb6e00;
+$dropPink: #fc87f0;
+$dropTextPink: #b31299;
+$dropRed: #ff999f;
+$dropTextRed: #920a02;
+$grayNotAttended: #dcdcdc;
+
+// Toast Colors
+$toastSuccess: #04aa53;
+$toastError: $error;
+$toastInfo: $primary;
+
+// Icons side bar
+$color-projects: $dropTextGreen;
+$color-team: $dropTextBlue;
+$color-integrations: $dropTextPink;
+
+// Form icons
+$color-icon-base: $gray-quaternary;
+
+// Color errors response API
+$color-error: red;
+
+// Buttons
+$disabled-btn: #d3dcfc;
+
+// Input
+$input-gray: rgba(33, 33, 33, 0.08);
+$input-text-color: $gray-quaternary;
+
+// keep in mind this color is in the design as secondary/100t
+.bg-secondary-96t {
+	background-color: tint($secondary, 96);
+}
+.color-secondary-96t {
+	color: tint($secondary, 96);
+}
+@include key-value-color('color', 'color');
+@include key-value-color('bg', 'background-color');
+@include key-value-color('border', 'border-color');

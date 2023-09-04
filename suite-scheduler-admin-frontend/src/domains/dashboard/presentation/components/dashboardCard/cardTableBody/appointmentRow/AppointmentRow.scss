@@ -1,0 +1,84 @@
+@import '../../../../../../../shared/application/theme/colors';
+@import '../../../../../../../shared/application/theme/mixins';
+
+.card-body {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+
+	> td {
+		padding: 12px 0;
+	}
+	> .container-hour {
+		> .hour {
+			display: flex;
+			width: 103px;
+			height: 31px;
+			color: $white;
+			background: $primary;
+			border-radius: 3px 0px 0px 3px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		> .last-day {
+			background: $gray-secondary;
+		}
+	}
+	> .text-ellipsis-table {
+		@extend .color-secondary-800t;
+		font-weight: 700;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 9.5rem;
+		min-width: 8rem;
+
+		> .name {
+			@extend .color-secondary-800t;
+			margin-bottom: -20px;
+		}
+
+		> .email {
+			@extend .color-secondary-500t;
+		}
+	}
+	> .disable-field {
+		@extend .color-secondary-800t;
+		font-size: 13px;
+	}
+	> .container-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@extend .bg-neutral-200t;
+		width: 32px;
+		height: 30px;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-top: 15px;
+
+		i {
+			@extend .color-secondary-700t;
+			font-size: 18px;
+		}
+		i:active {
+			color: $primary;
+		}
+
+		.sync-warning-icon {
+			color: $error;
+			font-size: 17px;
+			cursor: auto;
+
+			@include x-x-large-view {
+				font-size: width-ratio(15px);
+			}
+		}
+	}
+}
+
+.card-body:last-of-type {
+	border-bottom: none;
+}

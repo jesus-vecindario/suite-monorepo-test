@@ -1,0 +1,9 @@
+.integrations-accordion-item {
+	margin-bottom: 4rem;
+	> .accordion__panel {
+		background-color: white;
+		padding: 4rem;
+		padding-left: 21rem;
+		transition: all 1s;
+	}
+}

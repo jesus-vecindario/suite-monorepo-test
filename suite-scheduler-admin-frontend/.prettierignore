@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+.eslintignore
+yarn.lock
+package.json
+.prettierignore
+
+# Ignore all HTML files:
+*.html

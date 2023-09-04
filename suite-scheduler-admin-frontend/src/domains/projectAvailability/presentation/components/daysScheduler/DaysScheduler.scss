@@ -1,0 +1,23 @@
+@import '../../../../../shared/application/theme/colors';
+
+$table-border: 5px;
+
+.days-scheduler {
+	width: 100%;
+
+	> .wrapper {
+		@extend .bg-white;
+		border-collapse: separate;
+		border-spacing: 0 24px;
+		width: 100%;
+		border-radius: 16px;
+		padding: 30px 24px;
+		border: none;
+	}
+
+	> .error {
+		height: 15px;
+		color: red;
+		font-size: 12.8px;
+	}
+}

@@ -1,0 +1,48 @@
+@import 'src/shared/application/theme/colors';
+
+.item-list-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+
+	> .circle {
+		@extend .bg-white;
+		border-style: solid;
+		border-width: 1px;
+		@extend .border-neutral-400t;
+		border-radius: 50%;
+		width: 28px;
+		height: 28px;
+		margin-right: 16px;
+
+		&.item-checked {
+			@extend .bg-success-300t;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			> .icon {
+				font-size: 14px;
+				@extend .color-white;
+			}
+		}
+	}
+
+	> .item-text {
+		@extend .color-secondary-900t;
+
+		> .link {
+			@extend .color-primary;
+			cursor: pointer;
+		}
+	}
+
+	&.text-decoration {
+		> .item-text {
+			text-decoration: line-through;
+			> .link {
+				@extend .color-secondary-900t;
+			}
+		}
+	}
+}

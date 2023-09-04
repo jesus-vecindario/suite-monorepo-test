@@ -1,0 +1,43 @@
+import { MODAL_ADD_PEOPLE, MODAL_EDIT_PERSON, PEOPLE_CONTAINER, ROW_PERSON, TEAM } from '../translation_keys';
+
+export default {
+	[TEAM.HELMET]: 'Vecindario Suite - Administrator - Manage Team',
+	[TEAM.TEX_TAG_1]: 'Review and analyze your team in the project:',
+	[TEAM.DESCRIPTION]: 'Add or remove project members. Create, reassign, or delete roles and project modules.',
+	[TEAM.SEARCH_PLACEHOLDER]: 'Search by name',
+	[TEAM.BUTTON_ADD_USER]: 'Add a new user',
+	[TEAM.PEOPLE_DESCRIPTION_DIRECTOR]:
+		'The director is the main responsible for the project, playing a key role in configuring, parameterizing, and integrating the entire inventory.',
+	[TEAM.PEOPLE_DESCRIPTION_ADVISER]:
+		'The adviser is responsible for providing information to the modules according to the projects, verifying and approving the authenticity of the documents, and accompanying and guiding clients throughout the home buying process.',
+	[TEAM.PEOPLE_DESCRIPTION_MARKETING]:
+		'The marketing role is for the person in charge of designing and building the landing page experience and communication channels with clients.',
+	[TEAM.MARKETING_TITLE]: 'Project Marketing',
+	[TEAM.PREMIUM_MODAL_TITLE_1]: 'You have reached the maximum',
+	[TEAM.PREMIUM_MODAL_TITLE_2]: 'number of team members',
+	[TEAM.PREMIUM_MODAL_DESCRIPTION]: 'Upgrade to premium to add more people',
+	[TEAM.INVITED_USER]: 'Successful guest user',
+	[TEAM.FAILED_INVITED_USER]: 'Failed to invite user',
+	[TEAM.CHANGEDS_SUCCESSFULL]: 'Changes saved successfully',
+	[TEAM.CHANGEDS_ERROR]: 'Changes were not updated',
+	[TEAM.USER_DELETED]: 'User deleted successfully',
+	[TEAM.USER_NOT_DELETED]: 'The user was not deleted',
+	[PEOPLE_CONTAINER.TEX_TAG_1]: 'Project {{rol}}',
+	[PEOPLE_CONTAINER.DIRECTORS]: 'Directors',
+	[PEOPLE_CONTAINER.ADVISERS]: 'Advisers',
+	[PEOPLE_CONTAINER.TEX_TAG_2]: 'No people assigned to this role',
+	[ROW_PERSON.SMALL]: 'Pending invitation acceptance',
+	[ROW_PERSON.EDIT]: 'Edit',
+	[MODAL_EDIT_PERSON.H5_1]: 'Edit:',
+	[MODAL_EDIT_PERSON.DESCRIPTION_EDIT]: 'Assign a new role or permission to access more modules.',
+	[MODAL_EDIT_PERSON.H5_2]: 'Role in the project:',
+	[MODAL_EDIT_PERSON.DIRECTOR]: 'Director',
+	[MODAL_EDIT_PERSON.ADVISER]: 'Adviser',
+	[MODAL_EDIT_PERSON.MARKETING]: 'Marketing',
+	[MODAL_EDIT_PERSON.MODULES_SELECT]: 'Select modules',
+	[MODAL_EDIT_PERSON.MODULES_SELECT_ALL]: 'Select all modules',
+	[MODAL_EDIT_PERSON.BUTTON_1]: 'Remove team member',
+	[MODAL_EDIT_PERSON.BUTTON_2]: 'Save',
+	[MODAL_ADD_PEOPLE.TEX_TAG_1]: 'Add a team member to your project',
+	[MODAL_ADD_PEOPLE.DESCRIPTION]: 'Enter the information to join your team, and click "Add" when you finish',
+};

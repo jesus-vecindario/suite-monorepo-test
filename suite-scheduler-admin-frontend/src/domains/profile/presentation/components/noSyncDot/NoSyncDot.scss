@@ -1,0 +1,9 @@
+@import 'src/shared/application/theme/colors';
+
+.red-dot {
+	width: 8px;
+	height: 8px;
+
+	@extend .bg-error;
+	border-radius: 50%;
+}

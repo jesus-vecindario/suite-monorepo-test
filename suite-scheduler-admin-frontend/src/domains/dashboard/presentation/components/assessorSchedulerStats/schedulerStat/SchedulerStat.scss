@@ -1,0 +1,60 @@
+@import '../../../../../../shared/application/theme/colors';
+
+.stat-container {
+	$card-size: 84px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	> .card {
+		height: $card-size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 4rem;
+		width: $card-size;
+		border-radius: 8px;
+
+		&.done-color {
+			@extend .bg-success-100t;
+		}
+
+		&.pending-color {
+			@extend .bg-warning-100t;
+		}
+		&.rescheduled-color {
+			@extend .bg-primary-100t;
+		}
+		&.cancelled-color {
+			@extend .bg-error-100t;
+		}
+		&.not-attended-color {
+			@extend .bg-neutral-300t;
+		}
+	}
+
+	> .data-container {
+		margin-left: 2rem;
+
+		> .values {
+			@extend .color-secondary;
+			font-weight: 500;
+			font-size: 3.5rem;
+			line-height: 4.5rem;
+			letter-spacing: -1px;
+
+			> .percentage {
+				font-size: 2.5rem;
+				margin-left: 0.8rem;
+				line-height: 3rem;
+			}
+		}
+
+		> .title {
+			@extend .color-secondary-600t;
+			font-weight: 500;
+			letter-spacing: 0.3px;
+			font-size: 1.5rem;
+		}
+	}
+}

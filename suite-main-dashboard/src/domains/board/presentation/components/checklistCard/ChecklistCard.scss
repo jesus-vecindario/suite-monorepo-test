@@ -1,0 +1,49 @@
+@import 'src/shared/application/theme/theme';
+
+.checklist-card-container {
+	@extend .bg-white;
+	padding: 24px 32px 36px 32px;
+	border-radius: 20px;
+
+	> .header {
+		display: flex;
+		justify-content: space-between;
+
+		> .progress-with-label {
+			align-self: center;
+
+			display: flex;
+			align-items: center;
+			> .progress-bar-container {
+				@extend .bg-neutral-300t;
+				height: 4px;
+				width: 60px;
+				border-radius: 5px;
+
+				> .progress-bar-fill {
+					@extend .bg-success-300t;
+					height: 4px;
+					border-radius: 5px;
+				}
+			}
+
+			> .steps-completed {
+				margin-left: 16px;
+				@extend .color-secondary-400t;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	> .body {
+		height: 100%;
+
+		> * {
+			margin-top: 20px;
+		}
+
+		.item-text > .link {
+			text-decoration: none;
+		}
+	}
+}

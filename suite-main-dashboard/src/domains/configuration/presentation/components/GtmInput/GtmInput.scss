@@ -1,0 +1,14 @@
+@import 'src/shared/application/theme/colors';
+
+.gtm-input {
+	padding: 46px 32px;
+	background-color: $white;
+	display: flex;
+	flex-direction: column;
+	row-gap: 14px;
+	width: 100%;
+
+	> .card-input {
+		max-width: 620px;
+	}
+}

@@ -1,0 +1,41 @@
+@import 'src/shared/application/theme/colors';
+
+.multi-selection {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+
+	> .title {
+		@extend .color-secondary-700t;
+		font-size: 20px;
+		margin-bottom: 28px;
+		letter-spacing: -1px;
+	}
+
+	> .options-wrapper {
+		@extend .bg-white;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 30px 24px;
+		border-radius: 16px;
+
+		> * {
+			margin-right: 40px;
+		}
+
+		> *:last-child {
+			margin-right: 0;
+		}
+	}
+
+	> .error {
+		color: red;
+		font-size: 12.8px;
+		margin-top: 8px;
+		height: 12px;
+	}
+}

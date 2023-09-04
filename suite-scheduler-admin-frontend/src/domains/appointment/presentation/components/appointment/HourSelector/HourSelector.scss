@@ -1,0 +1,47 @@
+@import '../../../../../../shared/application/theme/colors';
+
+.hour-selector-container {
+	width: 100%;
+	.title {
+		@extend .color-black;
+		font-size: 15px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 12px;
+		font-weight: 500;
+	}
+
+	.hours-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		padding: 0 24px;
+		> .hour-box {
+			display: flex;
+			justify-content: center;
+			> .hour {
+				width: 96px;
+				border-width: 1px;
+				border-style: solid;
+				@extend .border-secondary-700t;
+				@extend .bg-neutral-100t;
+				@extend .color-secondary-700t;
+				border-radius: 4px;
+				font-size: 1.45rem;
+				padding: 0.8rem;
+				margin: 0.8rem 1.6rem 0.8rem 0;
+				cursor: pointer;
+				text-align: center;
+				transition: all 0.3s ease-in-out;
+			}
+			&.-active {
+				> .hour {
+					@extend .bg-secondary-700t;
+					@extend .color-white;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

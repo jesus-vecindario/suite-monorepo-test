@@ -1,0 +1,23 @@
+@import '../../../application/theme/animations';
+@import '../../../application/theme/colors';
+
+.scheduler-modal-icon {
+	font-size: 2.2rem;
+	cursor: pointer;
+	transition: color 0.35s;
+
+	&.-close {
+		position: relative;
+		top: 3rem;
+		right: -90%;
+	}
+
+	&:hover {
+		color: mix(white, $secondary, 30);
+	}
+}
+
+.scheduler-modal-container {
+	max-height: 95vh;
+	overflow-y: auto;
+}

@@ -1,0 +1,191 @@
+@import '../../../../../shared/application/theme/colors';
+@import '../../../../../shared/application/theme/theme';
+@import 'src/shared/application/theme/mixins';
+
+.schedule-btn {
+	background: transparent;
+	font-size: 13px;
+	line-height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	> .icon {
+		font-size: 16px;
+		margin-right: 8px;
+		@extend .color-secondary;
+	}
+}
+
+.scheduler-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+
+	.schedule {
+		height: 100%;
+		width: 100%;
+		max-width: 1100px;
+		overflow-y: hidden;
+		display: flex;
+		flex-direction: column;
+
+		> .schedule-description {
+			margin-top: 40px;
+			> .title {
+				@extend .color-secondary-900t;
+				margin-bottom: 12px;
+			}
+
+			> .description {
+				width: 600px;
+				@extend .color-secondary-700t;
+				font-size: 16px;
+				line-height: 22px;
+				margin-bottom: 32px;
+
+				@include x-x-large-view {
+					display: none;
+				}
+			}
+
+			@include x-x-large-view {
+				margin-top: 16px;
+				margin-bottom: 8px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			> .button-today {
+				margin-left: 20px;
+				padding: 8px 20px;
+				cursor: pointer;
+				font-style: normal;
+				font-size: 10px;
+				background: transparent;
+				display: none;
+				margin-right: 20px;
+
+				@include x-x-large-view {
+					display: block;
+				}
+			}
+		}
+
+		> .header-schedule {
+			width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+
+			> .actions {
+				display: flex;
+
+				> .btn-adviser-link {
+					@extend .schedule-btn;
+					margin-right: 20px;
+					padding: 8px 20px 8px 13px;
+
+					@include x-x-large-view {
+						font-size: 10px;
+						margin-right: 16px;
+						line-height: 10px;
+					}
+				}
+
+				> .btn-stats {
+					@extend .schedule-btn;
+					margin-right: 20px;
+					padding: 8px 20px;
+
+					@include x-x-large-view {
+						font-size: 10px;
+						margin-right: 16px;
+						line-height: 10px;
+					}
+				}
+
+				> .btn-new-appointment {
+					@extend .bg-secondary;
+					padding: 8px 20px 8px 10px;
+
+					> .icon {
+						@extend .color-white;
+						margin-right: 10px;
+					}
+
+					@include x-x-large-view {
+						font-size: 10px;
+						margin-right: 16px;
+						line-height: 10px;
+					}
+				}
+			}
+		}
+
+		> .button-today {
+			align-self: flex-end;
+			margin: 31px 18px;
+			padding: 8px 20px;
+			cursor: pointer;
+			font-style: normal;
+			font-size: 13px;
+			line-height: 18px;
+			background: transparent;
+
+			@include x-x-large-view {
+				display: none;
+			}
+		}
+
+		> .section-appointments {
+			height: 50%;
+			position: relative;
+			scroll-behavior: smooth;
+
+			.vanish-appointments {
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				pointer-events: none;
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(245, 247, 248, 1) 90%);
+				width: 100%;
+				height: 2em;
+			}
+			.top-vanish {
+				background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(245, 247, 248, 1) 90%);
+				top: -1px;
+				bottom: 0;
+			}
+
+			.no-more-scheduling {
+				text-align: center;
+				margin: 5rem 0;
+				@extend .color-secondary-700t;
+			}
+
+			@include x-x-large-view {
+				margin-top: 32px;
+				height: 70%;
+			}
+		}
+		> .m-without-button {
+			margin-top: 8rem;
+		}
+		.empty-appointments {
+			text-align: center;
+			@extend .color-secondary-700t;
+			margin-top: 3rem;
+		}
+	}
+}
+
+.new-appointment-modal {
+	> .scheduler-modal-icon {
+		position: relative;
+		right: initial;
+		left: 90%;
+		top: 3rem;
+	}
+}

@@ -1,0 +1,12 @@
+@import 'src/shared/application/theme/colors';
+
+.configuration-card {
+	background-color: $white;
+	padding: 32px;
+	border-radius: 4px;
+	width: 100%;
+	max-width: 520px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
